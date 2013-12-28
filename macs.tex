@@ -12,26 +12,32 @@
 
 % Setup count registers
 % chapter
-\count0=0
+\count10=0
 % verse
-\count1=0
+\count11=0
 % book
-\count2=0
+\count12=0
 
 % Macros
+%eject to odd
+\def\ejtoodd#1{\ifodd\count0\null\break\eject\null\break\eject\else\null\break\eject\fi}
+
 %title
-\def\title#1{\centerline{\titlefont #1}}
+\def\title#1{\centerline{\titlefont #1}\vskip 26pt \centerline{\bkheadfont \versionname}\eject}
 
 %version
 \def\version#1{\def\versionname{The #1 Version}}
 
 %testament
-\def\testament#1{\rightline{\titlefont The #1 Testament}}
+\def\testament#1{\ejtoodd{}\rightline{\titlefont The #1 Testament}\eject\count12=0}
 
 %book
+\def\book#1{}
 
 %chapter
+\def\chapter#1{}
 
 %verse
+\def\verse{}
 
 %emphasis
