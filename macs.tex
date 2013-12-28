@@ -6,10 +6,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \font\mainfont=cmr10
-\font\chheadfont=cmssbx12
-\font\bkheadfont=cmssbx at 24pt
-\font\numbers=cmr9
-\font\titlefont=cmi12 at 48pt
+\font\chheadfont=cmssbx10
+\font\bkheadfont=cmssbx10 scaled \magstep2
+\font\titlefont=cmti10 scaled \magstep4
 
 % Setup count registers
 % chapter
@@ -21,9 +20,10 @@
 
 % Macros
 %title
+\def\title#1{\centerline{\titlefont #1}}
 
 %version
-\def\version#1{\def\versionname{The #1 Version}
+\def\version#1{\def\versionname{The #1 Version}}
 
 %testament
 \def\testament#1{\rightline{\titlefont The #1 Testament}}
