@@ -9,6 +9,7 @@
 \font\chheadfont=cmssbx10
 \font\bkheadfont=cmssbx10 scaled \magstep2
 \font\titlefont=cmti10 scaled \magstep4
+\font\emphfont=cmti10
 
 % Setup count registers
 % chapter
@@ -32,10 +33,10 @@
 \def\testament#1{\ejtoodd{}\rightline{\titlefont The #1 Testament}\eject\count12=1}
 
 %book
-\def\book#1{}
+\def\book#1{{\bkheadfont #1\break}\count10=1\count11=1}
 
 %chapter
-\def\chapter#1{}
+\def\chapter{{\chheadfont \number\count10}\count11=1}
 
 %verse
 \def\verse{$ ^{\number\count11} $\advance\count11 by 1}
