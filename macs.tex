@@ -12,11 +12,11 @@
 
 % Setup count registers
 % chapter
-\count10=0
+\count10=1
 % verse
-\count11=0
+\count11=1
 % book
-\count12=0
+\count12=1
 
 % Macros
 %eject to odd
@@ -29,7 +29,7 @@
 \def\version#1{\def\versionname{The #1 Version}}
 
 %testament
-\def\testament#1{\ejtoodd{}\rightline{\titlefont The #1 Testament}\eject\count12=0}
+\def\testament#1{\ejtoodd{}\rightline{\titlefont The #1 Testament}\eject\count12=1}
 
 %book
 \def\book#1{}
@@ -38,6 +38,7 @@
 \def\chapter#1{}
 
 %verse
-\def\verse{}
+\def\verse{$ ^{\number\count11} $\advance\count11 by 1}
 
 %emphasis
+\def\emph#1{}
