@@ -10,6 +10,7 @@
 \font\bkheadfont=cmssbx10 scaled \magstep2
 \font\titlefont=cmti10 scaled \magstep4
 \font\emphfont=cmti10
+\font\itheading=cmss10
 
 % Setup count registers
 % chapter
@@ -42,4 +43,6 @@
 \def\verse{$ ^{\number\count11} $\advance\count11 by 1}
 
 %emphasis
-\def\emph#1{}
+\def\emph#1{{\emphfont #1}}
+
+%ithead
